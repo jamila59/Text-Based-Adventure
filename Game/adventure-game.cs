@@ -5,9 +5,9 @@ namespace Game.Adventure
 {
     class Game 
     {
-        private string _playername;
-        private int _difficulty;
-        private List<string> _items; 
+        public string _playername { get; set; }
+        public int _difficulty { get; set; }
+        public List<string> _items { get; set; }
 
         public Game(string playername,int difficulty)
         {
@@ -21,24 +21,5 @@ namespace Game.Adventure
             int _difficulty;
             List<string> _items = new List<string>(); 
        }
-        public string ChangeRoom(string userLocation)
-        {
-            if (userLocation == "Bedroom")
-            {
-                return _items[1];
-            }
-            else if (userLocation == "Bathroom") 
-            {
-                return "Player had enterd Bathroom.";
-            }
-            else if (userLocation == "Livingroom") 
-            {
-                return "Access denied! Hint: Check other room for key.";
-            }
-            else 
-            {
-                return "Enter valid choice.";
-            }
-        }
     }
 }
