@@ -15,6 +15,7 @@ namespace Game.Adventure
         {
             Console.WriteLine("Welcome to the Escape-Roome game. \n Please enter Player Name:");
             string userName = Console.ReadLine();
+            Console.WriteLine("Select difficulty: Easy or Hard");
             Console.WriteLine("Hello " + userName + "!");
             ChangeRoom(userName);
         }
@@ -35,7 +36,7 @@ namespace Game.Adventure
             }
             else if (userLocation == "Livingroom") 
             {
-                if(!(ourPlayer._items[0] == "key" || ourPlayer._items[1] == "key") && (ourPlayer._items[0] == "POOPY" || ourPlayer._items[1] == "POOPY"))
+                if(!(ourPlayer.Items[0] == "key" || ourPlayer.Items[1] == "key") && (ourPlayer.Items[0] == "POOPY" || ourPlayer.Items[1] == "POOPY"))
                 {
                 Console.WriteLine("Access denied! Hint: Check other room for key.");
                 ChangeRoom(userName);
@@ -63,7 +64,7 @@ namespace Game.Adventure
                 if (response1 == "Yes")
                 {
                     Console.WriteLine("You have found a key!");
-                    ourPlayer._items.Add("key");
+                    ourPlayer.Items.Add("key");
                     ChangeRoom(userName);
                 }
                 else 
@@ -80,7 +81,7 @@ namespace Game.Adventure
                 if(response2 == "Yes")
                 {
                     Console.WriteLine("You have rescued a new friend by the name POOPY");
-                    ourPlayer._items.Add("POOPY");
+                    ourPlayer.Items.Add("POOPY");
                     ChangeRoom(userName);
                 }
                 else 

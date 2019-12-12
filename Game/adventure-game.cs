@@ -5,21 +5,22 @@ namespace Game.Adventure
 {
     class Game 
     {
-        public string _playername { get; set; }
-        public int _difficulty { get; set; }
-        public List<string> _items { get; set; }
+        public string Playername { get; set; }
+        public string Difficulty { get; set; }
+        public List<string> Items { get; set; }
 
-        public Game(string playername,int difficulty)
+        public Game(string playername, string difficulty)
         {
-            _playername = playername;
-            _difficulty = difficulty;
-            _items = new List<string> () {};
+            Playername = playername;
+            Difficulty = difficulty;
+            Items = new List<string> () {};
         }
-       public void StartGame()
-       {
-            string _playername;
-            int _difficulty;
-            List<string> _items = new List<string>(); 
-       }
+    //    public void StartGame()
+    //    {
+    //         string playername;
+    //         int difficulty;
+    //         List<string> items = new List<string>(); 
+    //    }
+
     }
 }
