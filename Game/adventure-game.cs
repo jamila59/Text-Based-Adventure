@@ -13,7 +13,7 @@ namespace Game.Adventure
         {
             _playername = playername;
             _difficulty = difficulty;
-            _items = new List<string> () {"key", "memo", "poison"};
+            _items = new List<string> () {};
         }
        public void StartGame()
        {
